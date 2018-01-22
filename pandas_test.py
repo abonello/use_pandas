@@ -2,6 +2,8 @@ import datetime                     # used to tell Pandas some dates that we wan
 import pandas
 from pandas_datareader import data  # use this to pull data from the internet. 
 # pandas_datareader was previously known as pandas.io.data
+import matplotlib.pyplot as plt
+from matplotlib import style
 
 '''
 The Pandas module is a high performance, highly efficient, and high level data analysis library.
@@ -13,5 +15,7 @@ end = datetime.datetime(2015, 8, 22)
 # create a dataframe
 df = data.DataReader("XOM", "yahoo", start, end) # pulls data for Exxon from the Yahoo Finance API
 
-print df.head()
+print df.head(20)
+
+# Plotting with Pandas
 
