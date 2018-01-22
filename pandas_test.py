@@ -5,6 +5,7 @@ from pandas_datareader import data  # use this to pull data from the internet.
 import matplotlib.pyplot as plt
 from matplotlib import style
 
+
 '''
 The Pandas module is a high performance, highly efficient, and high level data analysis library.
 '''
@@ -19,3 +20,8 @@ print df.head(20)
 
 # Plotting with Pandas
 
+style.use('fivethirtyeight')
+
+df['High'].plot()
+plt.legend()
+plt.show()
